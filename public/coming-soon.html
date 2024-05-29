@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            background-color: black;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, #00bfff 1px, transparent 1px);
+            background-size: 30px 30px; /* Increased space between dots */
+            z-index: -1;
+            animation: moveBackground 20s linear infinite;
+        }
+
+        @keyframes moveBackground {
+            0% {
+                transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+            }
+            25% {
+                transform: translateX(-50px) translateY(-50px) scale(1.2) rotate(15deg);
+            }
+            50% {
+                transform: translateX(-100px) translateY(-100px) scale(1) rotate(0deg);
+            }
+            75% {
+                transform: translateX(-150px) translateY(-50px) scale(1.2) rotate(-15deg);
+            }
+            100% {
+                transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+            }
+        }
+
+        .message {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #00bfff;
+        }
+
+        p {
+            font-size: 24px;
+        }
+
+        a {
+            color: #00bfff;
+            text-decoration: none;
+            font-size: 18px;
+            border: 2px solid #00bfff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #00bfff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="message">
+        <h1>Coming Soon</h1>
+        <p>We are working hard to bring you this feature.</p>
+        <a href="index.html">Back to Home</a>
+    </div>
+</body>
+</html>
